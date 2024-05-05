@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+</head>
+<body>
+    <h1>Our Services</h1>
+    <p>List of services offered by S&E Landscaping:</p>
+    <ul>
+        {% for service in services %}
+            <li>{{ service.name }} - {{ service.description }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}">Back to Home</a>
+    <a href="{% url 'contact' %}">Contact Us</a>
+</body>
+</html>
