@@ -1,104 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            padding-top: 70px;
-        }
-        .navbar {
-            background-color: #343a40 !important;
-        }
-        .navbar-brand {
-            color: #fff !important;
-        }
-        .navbar-nav .nav-link {
-            color: #fff !important;
-            padding: 10px 20px;
-        }
-        .card {
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
-        .card-title {
-            font-weight: bold;
-        }
-        .footer {
-            background-color: #343a40;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">S&E Landscaping</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'index' %}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'services' %}">Our Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+<!-- services.html -->
+{% extends 'base.html' %}
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <h1 class="mt-5 mb-4">Our Services</h1>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Lawn Mowing</h5>
-                        <p class="card-text">We offer professional lawn mowing services to keep your lawn looking neat and tidy.</p>
-                    </div>
+{% block title %}Our Services{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="mt-5 mb-4">Our Services</h1>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Lawn Mowing</h5>
+                    <p class="card-text">We offer professional lawn mowing services to keep your lawn looking neat and tidy.</p>
                 </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Tree Trimming</h5>
-                        <p class="card-text">Our skilled team provides tree trimming services to maintain the health and appearance of your trees.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Garden Design</h5>
-                        <p class="card-text">Let us help you create a stunning garden with our professional garden design services.</p>
-                    </div>
-                </div>
-                <!-- Add more cards for additional services -->
             </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Tree Trimming</h5>
+                    <p class="card-text">Our skilled team provides tree trimming services to maintain the health and appearance of your trees.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Garden Design</h5>
+                    <p class="card-text">Let us help you create a stunning garden with our professional garden design services.</p>
+                </div>
+            </div>
+            <!-- Add more cards for additional services -->
         </div>
     </div>
-
-    <footer class="footer">
-        <div class="container">
-            <span>&copy; 2024 S&E Landscaping</span>
-        </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+</div>
+{% endblock %}
