@@ -1,15 +1,54 @@
-<!-- index.html -->
 {% extends 'base.html' %}
 
 {% block title %}Welcome to S&E Landscaping{% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8 text-center">
-            <h1 class="mt-5">Welcome to S&E Landscaping</h1>
-            <p class="lead">Beautiful landscapes await you!</p>
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h1 class="mt-5">Welcome to S&E Landscaping</h1>
+                <p class="lead">Transforming your outdoor spaces into works of art</p>
+            </div>
         </div>
     </div>
-</div>
+</section>
+
+<!-- Mission Statement -->
+<section class="mission-section bg-light py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h2>Our Mission</h2>
+                <p class="lead">At S&E Landscaping, we are committed to providing exceptional landscaping services that exceed our clients' expectations. Our mission is to create outdoor environments that inspire, enhance, and rejuvenate.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h2>About Us</h2>
+                <p class="lead">S&E Landscaping is a renowned landscaping company dedicated to craftsmanship and customer satisfaction. With years of experience and a passion for nature, we bring expertise and creativity to every project.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section bg-dark text-white py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h2>Ready to Transform Your Landscape?</h2>
+                <p>Contact us today for a free consultation and let's bring your vision to life!</p>
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Get Started</a>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
