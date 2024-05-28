@@ -13,21 +13,17 @@ features:
 ingress:
   rules:
   - component:
-      name: s-e
+      name: s-e-static
     match:
       path:
         prefix: /
 name: seahorse-app
 region: nyc
-services:
-- environment_slug: python
+static_sites:
+- environment_slug: html
   github:
     branch: main
     deploy_on_push: true
     repo: RyanRonish/S-E
-  http_port: 8080
-  instance_count: 1
-  instance_size_slug: apps-s-1vcpu-0.5gb
-  name: s-e
-  run_command: gunicorn --worker-tmp-dir /dev/shm
-  source_dir: /
+  name: s-e-static
+  source_dir: static
