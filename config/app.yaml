@@ -44,6 +44,3 @@ static_sites:
     repo: RyanRonish/S-E
   name: s-e-static
   source_dir: static
-
-run:
-  command: gunicorn se:app
