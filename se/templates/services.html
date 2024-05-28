@@ -32,7 +32,7 @@
     {% extends 'base.html' %}
 
     {% block title %}Our Services{% endblock %}
-
+    
     {% block content %}
     <div class="container">
         <div class="row justify-content-center">
@@ -43,42 +43,21 @@
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Lawn Care</h5>
                             <p class="card-text">We provide comprehensive lawn care services to keep your lawn healthy and green all year round.</p>
-                            <button class="btn btn-primary mt-auto expand-btn" type="button" data-bs-toggle="collapse" data-bs-target="#lawnCareDetails" aria-expanded="false" aria-controls="lawnCareDetails">
-                                More Details
-                            </button>
-                            <div class="collapse mt-3" id="lawnCareDetails">
-                                <div class="card card-body">
-                                    Detailed information about our lawn care services, including fertilization, aeration, and more.
-                                </div>
-                            </div>
+                            <a href="lawn_care.html" class="btn btn-primary mt-auto">More Details</a>
                         </div>
                     </div>
                     <div class="card mb-3 flex-grow-1">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Snow Removal</h5>
                             <p class="card-text">Our efficient snow removal services ensure your property is safe and accessible during the winter months.</p>
-                            <button class="btn btn-primary mt-auto expand-btn" type="button" data-bs-toggle="collapse" data-bs-target="#snowRemovalDetails" aria-expanded="false" aria-controls="snowRemovalDetails">
-                                More Details
-                            </button>
-                            <div class="collapse mt-3" id="snowRemovalDetails">
-                                <div class="card card-body">
-                                    Detailed information about our snow removal services, including our 24/7 availability and emergency response.
-                                </div>
-                            </div>
+                            <a href="snow_removal.html" class="btn btn-primary mt-auto">More Details</a>
                         </div>
                     </div>
                     <div class="card mb-3 flex-grow-1">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Free Consultations for Larger Projects</h5>
                             <p class="card-text">We offer free consultations to discuss and plan larger landscaping projects tailored to your needs.</p>
-                            <button class="btn btn-primary mt-auto expand-btn" type="button" data-bs-toggle="collapse" data-bs-target="#consultationDetails" aria-expanded="false" aria-controls="consultationDetails">
-                                More Details
-                            </button>
-                            <div class="collapse mt-3" id="consultationDetails">
-                                <div class="card card-body">
-                                    Detailed information about our consultation process, including site visits, project planning, and custom solutions.
-                                </div>
-                            </div>
+                            <a href="consultations.html" class="btn btn-primary mt-auto">More Details</a>
                         </div>
                     </div>
                 </div>
@@ -86,6 +65,7 @@
         </div>
     </div>
     {% endblock %}
+    
 
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
