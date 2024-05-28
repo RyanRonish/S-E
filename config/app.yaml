@@ -22,7 +22,7 @@ ingress:
     match:
       path:
         prefix: /
-name: monkfish-app
+name: orca-app
 region: nyc
 services:
 - environment_slug: python
@@ -31,8 +31,8 @@ services:
     deploy_on_push: true
     repo: RyanRonish/S-E
   http_port: 8080
-  instance_count: 2
-  instance_size_slug: apps-s-1vcpu-1gb
+  instance_count: 1
+  instance_size_slug: apps-s-1vcpu-0.5gb
   name: s-e
   run_command: gunicorn --worker-tmp-dir /dev/shm
   source_dir: /
