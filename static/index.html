@@ -1,54 +1,124 @@
-{% extends '/static/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}S&E Landscaping{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            margin: 0;
+            padding-bottom: 0px; /* Adjust this value as needed */
+        }
+        .navbar {
+            background-color: #343a40 !important;
+        }
+        .navbar-brand {
+            color: #fff !important;
+        }
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            padding: 10px 20px;
+        }
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 0px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" style="background-color: #000000;">
+        <img src="https://media.licdn.com/dms/image/D5616AQEMqnbG4PM7_A/profile-displaybackgroundimage-shrink_350_1400/0/1692892559280?e=1720656000&v=beta&t=4UQVLq9OVUUDuAYU9jDbv8TtL9_6OWOuLzEMqfWWOFo" alt="S&E Landscaping" class="img-fluid mx-auto d-block" style="width: 50%; height: auto;">
+    </div>
 
-{% block title %}Welcome to S&E Landscaping{% endblock %}
-
-{% block content %}
-<!-- Hero Section -->
-<section class="hero-section">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8 text-center">
-                <h1 class="mt-5">Welcome to S&E <br> Landscaping and Snow Removal</h1>
-                <p class="lead">Transforming your outdoor spaces into works of art</p>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #343a40;">
+        <div class="container">
+            <a class="navbar-brand" href="#">S&E Landscaping</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'services' %}">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<!-- Mission Statement -->
-<section class="mission-section bg-light py-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8 text-center">
-                <h2>Our Mission</h2>
-                <p class="lead">At S&E Landscaping, we are committed to providing exceptional landscaping services that exceed our clients' expectations. Our mission is to create outdoor environments that inspire, enhance, and rejuvenate.</p>
+    {% block content %}
+    {% endblock %}
+
+    <footer class="footer">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">About S&E Landscaping</h5>
+                    <p>
+                        We are dedicated to providing top-quality landscaping services to our clients. With our experienced team, we ensure that every project is completed to the highest standards.
+                    </p>
+                    <div class="mt-4">
+                        <a href="https://m.facebook.com/people/SEscudero/100063893839969/" target="_blank" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        <a href="https://twitter.com" target="_blank" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="https://www.linkedin.com" target="_blank" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-linkin"></i> Linkedin</a>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4 pb-1">Contact Us</h5>
+                    <ul class="fa-ul" style="margin-left: 0;">
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Greeley|Loveland|Colorado</span>
+                        </li>
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">s.escuderollc@gmail.com</span>
+                        </li>
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+1 (970) 342-7643</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Opening Hours</h5>
+                    <table class="table text-center text-white">
+                        <tbody class="font-weight-normal">
+                            <tr>
+                                <td>Monday - Friday:</td>
+                                <td>9:00 AM - 5:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday:</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday:</td>
+                                <td>Closed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- About Section -->
-<section class="about-section py-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8 text-center">
-                <h2>About Us</h2>
-                <p class="lead">S&E Landscaping is a renowned landscaping company dedicated to craftsmanship and customer satisfaction. With years of experience and a passion for nature, we bring expertise and creativity to every project.</p>
-            </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            &copy; 2024 S&E Landscaping | A Ryan Ronish Production
         </div>
-    </div>
-</section>
+    </footer>
 
-<!-- Call to Action -->
-<section class="cta-section bg-light py-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8 text-center">
-                <h2>Ready to Transform Your Landscape?</h2>
-                <p>Contact us today for a free consultation and let's bring your vision to life!</p>
-                <a href="{% url 'services' %}" class="btn btn-primary btn-lg">Get Started</a>
-            </div>
-        </div>
-    </div>
-</section>
-{% endblock %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
